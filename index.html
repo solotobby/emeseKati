@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emese project</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+        td,tr,th{
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+           <tr>
+            <th>API name</th>
+            <th>API description</th>
+            <th>Submit</th>
+        </tr> 
+        </thead>
+        <tbody>
+            <tr>
+            <td>Get country code</td>
+        
+            <td>
+                <label>Latitude</label>
+                <input name="lat" type="text" id="lat">
+    <br>
+    <label>Longitude</label>
+    <input name="long" type="text" id="long"></td>
+            <td><button type="button" id="ButtonClick">submit</button></td>
+        </tr>
+        <tr>
+            <td>Get country subdivision</td>
+        
+            <td>
+                <label>Latitude</label>
+                <input name="lat" type="text" id="soslat">
+    <br>
+    <label>Longitude</label>
+    <input name="lng" type="text" id="lng"></td>
+            <td><button type="button" id="divisonButton">submit</button></td>
+       
+        </tr>
+        <tr>
+            <td>find near by place name</td>
+        
+            <td>
+                <label>Latitude</label>
+                <input name="lat" type="text" id="nearLat">
+    <br>
+    <label>Longitude</label>
+    <input name="lng" type="text" id="nearLng"></td>
+            <td><button type="button" id="findNearByButton">submit</button></td>
+       
+        </tr>
+        
+        </tbody>
+           
+    </table>
+ <div>
+    
+    <h4>Country code result: <span id="result"></span></h4>
+    <h4>Country subdivision result: <span id="subdivisionresult"></span></h4>
+    <h4>Find near by place result: <span id="findNearByResult"></span></h4>
+
+ </div> 
+ <script type="application/javascript" src="libs/js/jquery-min.js"></script>
+		<script type="application/javascript" src="libs/js/script.js"></script>
+        <script type="application/javascript" src="libs/js/subdivision.js"></script>
+        <script type="application/javascript" src="libs/js/findNearByPlaceName.js"></script>
+</body>
+</html>
