@@ -8,7 +8,7 @@ $(function () {
 console.log(lng);
     $.ajax({
       type: "GET",
-      url: "libs/php/findNearByPlaceName.php",
+      url: "libs/php/findNearby.php",
       data: { lat: lat, lng: lng },
 
       success: function (data) {
