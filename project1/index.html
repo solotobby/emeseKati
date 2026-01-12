@@ -1,0 +1,154 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gazetteer App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <div class="navbar">
+    <h1>Gazetteer</h1>
+
+    <select id="countrySelect">
+      <option value="">Select Country</option>
+    </select>
+  </div>
+
+  <!-- ===== COUNTRY INFO PANEL ===== -->
+  <div class="info-panel" id="infoPanel">
+    <h2 id="countryName">Select a Country</h2>
+
+    <img id="countryFlag" src="" alt="Flag" />
+
+    <p>
+      <strong>Capital:</strong>
+      <span id="capital">—</span>
+    </p>
+
+    <p>
+      <strong>Population:</strong>
+      <span id="population">—</span>
+    </p>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <div class="main">
+
+    <!-- ===== ICON BAR ===== -->
+    <div class="icon-bar">
+      <button id="infoBtn" title="Country Info">ℹ</button>
+      <button id="weatherBtn" title="Weather">☁</button>
+      <button id="breakingNewsBtn" title="Breaking News">📰</button>
+      <!-- <button id="currencyBtn" title="Currency">💱</button> -->
+     
+      <button id="wikiBtn" title="Wikipedia">📖</button>
+     
+      <button id="landmarkBtn" title="Landmarks">🏛</button>
+      <button id="hospitalBtn" title="Hospitals">🏥</button>
+      <button id="universityBtn" title="Universities">🏫</button>
+      <button id="airportBtn" title="Airports">✈️ </button>
+      <button id="museumBtn" title="Museums">🏛 </button>
+      
+    </div>
+
+
+    <!-- ===== RIGHT CONTROL CARD ===== -->
+    <div class="control-card">
+      <h3>Map Layers</h3>
+
+      <label>
+        <input type="radio" name="mapType" value="osm" checked />
+        Open Street Map
+      </label>
+
+      <label>
+        <input type="radio" name="mapType" value="google" />
+        Google Street Map
+      </label>
+
+      <label>
+        <input type="radio" name="mapType" value="hybrid" />
+        Hybrid Map
+      </label>
+
+      <hr />
+
+
+      
+
+      <!-- ===== LAYER TOGGLES ===== -->
+      <label>
+        <input type="checkbox" checked />
+        Universities
+      </label>
+
+      <label>
+        <input type="checkbox" checked />
+        Cities
+      </label>
+
+      <label>
+        <input type="checkbox" checked />
+        Airports
+      </label>
+
+      <label>
+        <input type="checkbox" checked />
+        Hospitals
+      </label>
+
+      <label>
+        <input type="checkbox" checked />
+        Museums
+      </label>
+    </div>
+
+    <!-- ===== MAP ===== -->
+    <div id="map"></div>
+  </div>
+
+
+
+<!-- modal OUTSIDE -->
+<div class="modal fade" id="infoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+</div>
+
+  
+
+  <!-- ===== JS LIBRARIES ===== -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+
+</body>
+
+
+
+
+
+</html> 
